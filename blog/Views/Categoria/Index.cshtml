@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = null;
+}
+
+<h2>Index</h2>
+
+    <form action="Categoria/FormCreate" method="get">
+        <button type="submit" class="btn btn-primary">Nueva Categoria</button>
+    </form>
+  
+
+<div class="form-group" >
+    <table>
+        <thead>
+            <tr>
+                <td>Codigo Categoria</td>
+                <td> Descripcion</td>
+        
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.codigoCategoria</td>
+                <td>@item.descripcion</td>
+
+            </tr>
+            }
+        </tbody>                    
+        
+    </table>
+</div>
+
